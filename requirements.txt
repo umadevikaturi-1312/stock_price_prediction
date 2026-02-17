@@ -1,9 +1,13 @@
-pandas-	Data manipulation, CSV read/write
-numpy-	Numerical operations
-yfinance-	Fetch stock data
-scikit-learn-	Feature scaling, ML models (Linear Regression, etc.)
-matplotlib-	Basic plotting & visualization
-seaborn-	Advanced plots & trends
-plotly-	Interactive graphs for website
-flask
-tensorflow
+Python Libraries:
+  pandas-	Data manipulation, CSV read/write
+  numpy-	Numerical operations
+  yfinance-	Fetch stock data
+  scikit-learn-	Feature scaling, ML models (Linear Regression, etc.)
+  matplotlib-	Basic plotting & visualization
+  seaborn-	Advanced plots & trends
+  plotly-	Interactive graphs for website
+  tensorflow
+
+WEB:
+  flask-	Build the website backend
+  jinja2-	Flask HTML templating (comes with Flask)
