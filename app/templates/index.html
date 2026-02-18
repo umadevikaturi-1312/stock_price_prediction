@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock AI Trend</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <h3>Companies</h3>
+        {% for company in companies %}
+        <button onclick="loadChart('{{ company }}')">{{ company }}</button>
+        {% endfor %}
+    </div>
+
+    <div class="content">
+        <h2>Live Stock Price Prediction</h2>
+        <div id="chart" style="width:100%;height:450px;"></div>
+    </div>
+</div>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+function loadChart(company) {
+    fetch("/plot", {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: "company=" + company
+    })
+    .then(response => response.json())
+    .then(fig => {
+        if (fig.error) {
+            alert(fig.error);
+            return;
+        }
+        Plotly.newPlot('chart', fig.data, fig.layout);
+    })
+    .catch(error => console.error("Error:", error));
+}
+</script>
+
+</body>
+</html>
