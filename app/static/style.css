@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background: #1e1e2f;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    margin: 4px 0;
+    background: #2d2d44;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: #4a4aff;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+#chart {
+    width: 100%;
+    max-width: 900px;
+    border: 2px solid #1918185d;
+}
