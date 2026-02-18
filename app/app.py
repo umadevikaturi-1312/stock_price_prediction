@@ -13,7 +13,7 @@ app = Flask(__name__)
 # ---------------------------
 # Load Data
 # ---------------------------
-df = pd.read_csv("stock_features_ready.csv", parse_dates=['Date'])
+df = pd.read_csv("data/stock_features_ready.csv", parse_dates=['Date'])
 df.set_index('Date', inplace=True)
 
 # ---------------------------
@@ -132,4 +132,5 @@ def plot_stock():
 # ---------------------------
 
 if __name__ == "__main__":
+
     app.run(debug=True)
